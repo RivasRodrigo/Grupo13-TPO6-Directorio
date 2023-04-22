@@ -15,15 +15,16 @@ El directorio telefónico posee además las siguientes funcionalidades:
 
 public class Directorio {
     
-    private  HashMap<String,Cliente> mapClientes=new HashMap<>();
+    private  HashMap<String,Cliente> mapClientes=new HashMap();
 
     public Directorio() {
     }
     
     /*�? agregarCliente() que permite registrar un nuevo cliente con su respectivo nro de 
     teléfono. Siendo el nro del teléfono la clave del mismo.*/
-    public void agreagarCliente(){
+    public void agreagarCliente(String numeroTelefono,Cliente cliente){
         
+        mapClientes.put(numeroTelefono, cliente);
     }
    /*buscarTel�fono() que en base a un apellido nos devuelve una lista con los nros de
     tel�fono asociados a dicho apellido.*/ 
@@ -49,12 +50,14 @@ mismo.*/
     }
     /*�? buscarClientes() que en base a una ciudad nos devuelve una lista con los Clientes 
 asociados a dicha ciudad.*/
-    public void buscarClientes(String ciudad){
+    public ArrayList<Cliente> buscarClientes(String ciudad){
         ArrayList<Cliente>clientes=new ArrayList();
         Iterator<String> it=mapClientes.keySet().iterator();
         while(it.hasNext()){
-            
+            if(mapClientes.get(it).getCiudad().equals(it));
+            clientes.add(mapClientes.get(it));
         }
+        return clientes;
     }
     //�? borrarCliente() que en base al número de teléfono elimina al cliente del directorio.
     public void borrarCliente(){
