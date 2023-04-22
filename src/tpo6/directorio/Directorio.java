@@ -1,9 +1,11 @@
 
-package tpo_6_laboratorio_1_guiatelefonica;
+package tpo6.directorio;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
+import tpo_6_laboratorio_1_guiatelefonica.Cliente;
 
 /*Un directorio telefÃ³nico posee una lista de Clientes de los que interesa conocer su dni, 
 nombre, apellido, ciudad y direcciÃ³n.
@@ -18,23 +20,34 @@ public class Directorio {
     public Directorio() {
     }
     
-    /*â—? agregarCliente() que permite registrar un nuevo cliente con su respectivo nro de 
+    /*ï¿½? agregarCliente() que permite registrar un nuevo cliente con su respectivo nro de 
     telÃ©fono. Siendo el nro del telÃ©fono la clave del mismo.*/
     public void agreagarCliente(){
         
     }
-   /*buscarTeléfono() que en base a un apellido nos devuelve una lista con los nros de
-    teléfono asociados a dicho apellido.*/ 
+   /*buscarTelï¿½fono() que en base a un apellido nos devuelve una lista con los nros de
+    telï¿½fono asociados a dicho apellido.*/ 
     public void buscarTelefono(String apellido)
     {
         
     }
-    /*â—? buscarCliente() que en base al nro de telÃ©fono retorna el Cliente asociado al 
+    /*ï¿½? buscarCliente() que en base al nro de telÃ©fono retorna el Cliente asociado al 
 mismo.*/
-    public void buscarCliente(){
+    public Cliente buscarCliente(String numTelefonico){
+        
+        Cliente cliente =null;
+      
+        for (Map.Entry<String, Cliente> tel_cli : mapClientes.entrySet()) {
+           if(tel_cli.getKey().equals(numTelefonico)){
+               cliente = tel_cli.getValue();
+           }
+           
+        }
+        return cliente;
+        
         
     }
-    /*â—? buscarClientes() que en base a una ciudad nos devuelve una lista con los Clientes 
+    /*ï¿½? buscarClientes() que en base a una ciudad nos devuelve una lista con los Clientes 
 asociados a dicha ciudad.*/
     public void buscarClientes(String ciudad){
         ArrayList<Cliente>clientes=new ArrayList();
@@ -43,7 +56,7 @@ asociados a dicha ciudad.*/
             
         }
     }
-    //â—? borrarCliente() que en base al nÃºmero de telÃ©fono elimina al cliente del directorio.
+    //ï¿½? borrarCliente() que en base al nÃºmero de telÃ©fono elimina al cliente del directorio.
     public void borrarCliente(){
         
     }
