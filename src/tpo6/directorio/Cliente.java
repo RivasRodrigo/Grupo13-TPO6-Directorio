@@ -1,4 +1,4 @@
-package tpo_6_laboratorio_1_guiatelefonica;
+package tpo6.directorio;
 
 /*Un directorio telefónico posee una lista de Clientes de los que interesa conocer su dni, 
 nombre, apellido, ciudad y dirección.*/

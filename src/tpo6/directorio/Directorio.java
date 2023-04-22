@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import tpo_6_laboratorio_1_guiatelefonica.Cliente;
+
 
 /*Un directorio telefónico posee una lista de Clientes de los que interesa conocer su dni, 
 nombre, apellido, ciudad y dirección.
