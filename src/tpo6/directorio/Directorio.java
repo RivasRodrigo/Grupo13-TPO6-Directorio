@@ -23,14 +23,20 @@ public class Directorio {
     /*�? agregarCliente() que permite registrar un nuevo cliente con su respectivo nro de 
     teléfono. Siendo el nro del teléfono la clave del mismo.*/
     public void agreagarCliente(String numeroTelefono,Cliente cliente){
-        
         mapClientes.put(numeroTelefono, cliente);
     }
    /*buscarTel�fono() que en base a un apellido nos devuelve una lista con los nros de
     tel�fono asociados a dicho apellido.*/ 
-    public void buscarTelefono(String apellido)
+    public ArrayList<String> buscarTelefono(String apellido)
     {
-        
+        ArrayList<String>numsTelefono=new ArrayList();
+        Iterator<String> it=mapClientes.keySet().iterator();
+        while(it.hasNext()){
+            String clave = it.next();
+            if(mapClientes.get(clave).getApellido().equals(apellido));
+            numsTelefono.add(clave);
+        }
+       return numsTelefono; 
     }
     /*�? buscarCliente() que en base al nro de teléfono retorna el Cliente asociado al 
 mismo.*/
