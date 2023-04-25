@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 /*Un directorio telefónico posee una lista de Clientes de los que interesa conocer su dni, 
 nombre, apellido, ciudad y dirección.
@@ -22,8 +25,13 @@ public class Directorio {
     
     /*�? agregarCliente() que permite registrar un nuevo cliente con su respectivo nro de 
     teléfono. Siendo el nro del teléfono la clave del mismo.*/
+<<<<<<< Updated upstream
     public void agreagarCliente(String numeroTelefono,Cliente cliente){
         mapClientes.put(numeroTelefono, cliente);
+=======
+    public void agreagarCliente(String telefono,Cliente c){
+        mapClientes.put(telefono, c);
+>>>>>>> Stashed changes
     }
    /*buscarTel�fono() que en base a un apellido nos devuelve una lista con los nros de
     tel�fono asociados a dicho apellido.*/ 
@@ -42,14 +50,19 @@ public class Directorio {
 mismo.*/
     public Cliente buscarCliente(String numTelefonico){
         
-        Cliente cliente =null;
+        Cliente cliente = null ;
+       
       
         for (Map.Entry<String, Cliente> tel_cli : mapClientes.entrySet()) {
            if(tel_cli.getKey().equals(numTelefonico)){
                cliente = tel_cli.getValue();
+               
+           }else{
+               cliente = null;
            }
            
         }
+       
         return cliente;
         
         

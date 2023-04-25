@@ -3,11 +3,14 @@ package tpo6.directorio;
 /*Un directorio telefónico posee una lista de Clientes de los que interesa conocer su dni, 
 nombre, apellido, ciudad y dirección.*/
 public class Cliente {
+    
     protected String dni;
     protected String nombre;
     protected String apellido;
     protected String ciudad;
     protected String direccion;
+    
+    
     public Cliente(){
         
     }
@@ -19,6 +22,10 @@ public class Cliente {
         this.ciudad = ciudad;
         this.direccion = direccion;
     }
+
+  
+
+
 
     public void setDni(String dni) {
         this.dni = dni;
@@ -58,6 +65,11 @@ public class Cliente {
 
     public String getDireccion() {
         return direccion;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", ciudad=" + ciudad + ", direccion=" + direccion + '}';
     }
     
     
