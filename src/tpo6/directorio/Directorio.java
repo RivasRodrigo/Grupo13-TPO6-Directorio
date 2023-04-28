@@ -29,7 +29,7 @@ public class Directorio {
         
     }   
     
-   /*buscarTel�fono() que en base a un apellido nos devuelve una lista con los nros de
+   /*buscarTelefono() que en base a un apellido nos devuelve una lista con los nros de
     tel�fono asociados a dicho apellido.*/ 
     public ArrayList<String> buscarTelefono(String apellido)
     {

@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tpo6.directorio;
 
-import com.sun.org.apache.bcel.internal.generic.DREM;
+
 
 /**
  *
@@ -13,9 +9,7 @@ import com.sun.org.apache.bcel.internal.generic.DREM;
  */
 public class TPO6Directorio {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         
        Cliente cl = new Cliente("34434434","carlos","barloa","san luis","Sarmiento 2323");
